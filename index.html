@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desenho</title>
+</head>
+<body>
+  <canvas class="canvas" width="600px" height="400px"></canvas>
+  
+</body>
+<script>
+  
+function desenharQuadro(x,y,cor){
+  var tela = document.querySelector('canvas');
+  var pincel = tela.getContext('2d');
+
+  pincel.fillStyle = cor;
+  pincel.fillRect(x,y,50,50);
+  pincel.fillStroke = 'black';
+  pincel.strokeRect(x,y,50,50);
+}
+
+desenharQuadro(0,0, 'blue');
+desenharQuadro(0,50,'red'); 
+desenharQuadro(0,100, 'yellow');
+
+</script>
+</html>
